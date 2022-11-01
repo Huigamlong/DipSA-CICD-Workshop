@@ -1,4 +1,5 @@
 package main
+
 import (
 	"flag"
 	"fmt"
@@ -10,6 +11,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
 	"github.com/foolin/goview/supports/ginview"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
@@ -147,8 +149,7 @@ func main() {
 
 	r.Use(notFound)
 
-	log.Printf("S
-	tarting server on port %d\n", port)
+	log.Printf("Starting server on port %d\n", port)
 	if err := r.Run(fmt.Sprintf("0.0.0.0:%d", port)); nil != err {
 		log.Panicf("Cannot start server. %v\n", err)
 	}
