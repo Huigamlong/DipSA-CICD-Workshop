@@ -1,4 +1,4 @@
-name: My
+name: MyCA
 
 #trigger
 on: [push]
