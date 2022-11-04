@@ -41,7 +41,11 @@ jobs:
       uses: actions/checkout@v3
       with:
         ref: ${{github.ref_name}}
-        
+    
+    - name: Build Project
+      run: |
+        zip --junk-paths my-artifact README.md
+
     - name: Create_Release
       uses: ncipollo/release-action@v1.11.1
       env: 
@@ -49,6 +53,8 @@ jobs:
       with: 
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
 
     - name: Testing
       run: echo ${{secrets.TESTING}}
