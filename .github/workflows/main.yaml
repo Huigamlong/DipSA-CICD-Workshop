@@ -21,28 +21,39 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Use Node 16
+    - name: Use Node 16 from the only
       uses: actions/setup-node@v1
       with:
         node-version: 16
 
-    - name: Install Railway
+    - name: Install Railway package
       run: npm i -g @railway/cli
 
-    - name: Deploy
+    - name: Deployment myRailway
       run: railway up
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} 
 
     - name: echo current branch
       run: echo "$(date) Current branch is ${{ github.ref_name}}"
-    - name: Checkout correct branch
+      
+    - name: Checkout my branch v0.1
       uses: actions/checkout@v3
       with:
         ref: ${{github.ref_name}}
+    - name: Create_Release
+      uses: actions/checkout@v3
+      env: 
+        GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
+      with: 
+        tag_name: ${{ github_ref }}
+        release_name: Release ${{ github_ref }}
+
     - name: Testing
       run: echo ${{secrets.TESTING}}
-    - name: Slack Notification
+    
+
+    - name: Slack Notification From Long
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
       with: 
