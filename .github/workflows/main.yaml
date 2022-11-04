@@ -28,6 +28,11 @@ jobs:
     - name: Slack Notification
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
+      with: 
+        status: ${{job.status}}
+        steps: ${{toJson(steps)}}
+        channel: '#test-submission'
+      if: always()
       env: 
         SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
