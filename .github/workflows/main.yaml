@@ -46,8 +46,8 @@ jobs:
       env: 
         GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
       with: 
-        tag_name: ${{ github_ref }}
-        release_name: Release ${{ github_ref }}
+        tag_name: ${{ github_run_number }}
+        release_name: Release ${{ github_run_number }}
 
     - name: Testing
       run: echo ${{secrets.TESTING}}
