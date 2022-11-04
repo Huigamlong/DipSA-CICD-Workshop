@@ -46,7 +46,7 @@ jobs:
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
       with: 
-        channel-id: "#test-submission"
+        channel-id: 'CHANNEL_ID'
         payload: |
           {
           
@@ -58,7 +58,7 @@ jobs:
                 "text": "DipSA55 CI/CD Assignment Submission",
                 "emoji": true
               }
-            }
+            },
             {
               "type": "section",
               "fields": [
@@ -74,10 +74,10 @@ jobs:
             },
             {
             "type": "section",
-            "field": [
+            "fields": [
               {
                 "type": "mrkdwn",
-                "text": "*Email:*\n<E1045741@u.nus.edu|E1045741@u.nus.edu>*"
+                "text": "*Email:*\nE1045741@u.nus.edu"
               },
               {
                 "type": "mrkdwn",
@@ -87,7 +87,7 @@ jobs:
             },
             {
             "type": "section",
-            "field": [
+            "fields": [
               {
                 "type": "mrkdwn",
                 "text": "*Deployment:*\n<https://hushed-coal-production.up.railway.app>"
@@ -95,11 +95,11 @@ jobs:
             ]
             },
             {
-            "type": "section"
-            "field":[
+            "type": "section",
+            "fields":[
               {
                 "type": "mrkdwn",
-                "text":<https://hushed-coal-production.up.railway.app|Open Application>
+                "text": "<https://hushed-coal-production.up.railway.app|Open Application>"
               }
             ]
             }
