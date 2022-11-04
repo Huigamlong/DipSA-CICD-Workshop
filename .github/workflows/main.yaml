@@ -49,10 +49,6 @@ jobs:
       run: |
         zip --junk-paths my-artifact README.md
 
-    - name: Download Content
-      uses: actions/download-artifact@v2
-      with:
-        name: static-site
 
     - name: Create_Release
       uses: ncipollo/release-action@v1.11.1
