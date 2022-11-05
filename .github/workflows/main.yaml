@@ -94,7 +94,7 @@ jobs:
               },
               {
                 "type": "mrkdwn",
-                "text": "*Repostory:*\n< ${{secrets.MY_GITHUB_URL}} | git://github.com/Huigamlong/DipSA-CICD-Workshop.git >"
+                "text": "*Repostory:*\n<${{secrets.MY_GITHUB_URL}} | git://github.com/Huigamlong/DipSA-CICD-Workshop.git>"
               }
             ]
             },
