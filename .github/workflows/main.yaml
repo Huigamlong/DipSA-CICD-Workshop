@@ -47,7 +47,7 @@ jobs:
     
 
     - name: Create Release
-      uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1.11.1
       with: 
         tag: ${{ github.ref_name}}
         commit: ${{github.ref_name}}
