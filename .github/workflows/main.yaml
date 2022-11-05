@@ -94,7 +94,7 @@ jobs:
               },
               {
                 "type": "mrkdwn",
-                "text": "*Repostory:*\n< ${{MY_GITHUB_URL}} | git://github.com/Huigamlong/DipSA-CICD-Workshop.git >"
+                "text": "*Repostory:*\n< ${{secrets.MY_GITHUB_URL}} | git://github.com/Huigamlong/DipSA-CICD-Workshop.git >"
               }
             ]
             },
@@ -103,7 +103,7 @@ jobs:
             "fields": [
               {
                 "type": "mrkdwn",
-                "text": "*Deployment:*\n<${{MY_RAILWAY_URL}}>"
+                "text": "*Deployment:*\n<${{secrets.MY_RAILWAY_URL}}>"
               }
             ]
             },
@@ -112,7 +112,7 @@ jobs:
             "fields":[
               {
                 "type": "mrkdwn",
-                "text": "<${{MY_RAILWAY_URL}} | Open Application>"
+                "text": "<${{secrets.MY_RAILWAY_URL}} | Open Application>"
               }
             ]
             }
