@@ -94,7 +94,7 @@ jobs:
               },
               {
                 "type": "mrkdwn",
-                "text": "*Repostory:*\n<https://github.com/Huigamlong/DipSA-CICD-Workshop|https://github.com/Huigamlong/DipSA-CICD-Workshop>"
+                "text": "*Repostory:*\n< ${{MY_GITHUB_URL}} | ${{MY_GITHUB_URL}} >"
               }
             ]
             },
@@ -103,7 +103,7 @@ jobs:
             "fields": [
               {
                 "type": "mrkdwn",
-                "text": "*Deployment:*\n<https://hushed-coal-production.up.railway.app>"
+                "text": "*Deployment:*\n<${{MY_RAILWAY_URL}}>"
               }
             ]
             },
@@ -112,7 +112,7 @@ jobs:
             "fields":[
               {
                 "type": "mrkdwn",
-                "text": "<https://hushed-coal-production.up.railway.app|Open Application>"
+                "text": "<${{MY_RAILWAY_URL}} | Open Application>"
               }
             ]
             }
@@ -121,6 +121,6 @@ jobs:
           }
           
       env: 
-        SLACK_WEBHOOK_URL: ${{secrets.SLACK_SUBMISSION_URL}}
+        SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
         
