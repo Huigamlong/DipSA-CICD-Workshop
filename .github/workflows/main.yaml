@@ -1,7 +1,7 @@
 name: MyCA
 
 #trigger
-on: [push] # please check on the v0.1 or v0.2 version, this one is master branch
+on: [push] # please check on other v version, this one is master branch
   
 # jobs
 jobs: 
