@@ -94,7 +94,7 @@ jobs:
               },
               {
                 "type": "mrkdwn",
-                "text": "*Repostory:*\n<${{github.repositoryUrl}}>"
+                "text": "*Repostory:*\n<${{secrets.MY_GITHUB_URL}} | ${{github.repositoryUrl}}>"
               }
             ]
             },
@@ -121,6 +121,6 @@ jobs:
           }
           
       env: 
-        SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
+        SLACK_WEBHOOK_URL: ${{secrets.SLACK_SUBMISSION_URL}}
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
         
