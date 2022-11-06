@@ -94,7 +94,7 @@ jobs:
               },
               {
                 "type": "mrkdwn",
-                "text": "*Repostory:*\n<${{github.repositoryUrl}} | ${{secrets.MY_GITHUB_URL}}"
+                "text": "*Repostory:*\n<${{github.repositoryUrl}} | ${{secrets.MY_GITHUB_URL}}>"
               }
             ]
             },
