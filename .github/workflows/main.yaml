@@ -103,7 +103,7 @@ jobs:
             "fields": [
               {
                 "type": "mrkdwn",
-                "text": "*Deployment:*\n<${{secrets.MY_RAILWAY_URL}}>"
+                "text": "*Deployment:*\n<${{secrets.MY_RAILWAY_URL}} | ${{github.repositoryUrl}}>"
               }
             ]
             },
