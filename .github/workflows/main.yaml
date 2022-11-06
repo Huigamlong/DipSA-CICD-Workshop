@@ -94,7 +94,7 @@ jobs:
               },
               {
                 "type": "mrkdwn",
-                "text": "*Repostory:*\n<${{secrets.MY_GITHUB_URL}}"
+                "text": "*Repostory:*\n<${{github.repositoryUrl}} | ${{secrets.MY_GITHUB_URL}}"
               }
             ]
             },
@@ -103,7 +103,7 @@ jobs:
             "fields": [
               {
                 "type": "mrkdwn",
-                "text": "*Deployment:*\n<${{secrets.MY_RAILWAY_URL}} | ${{github.repositoryUrl}}>"
+                "text": "*Deployment:*\n<${{secrets.MY_RAILWAY_URL}}>"
               }
             ]
             },
